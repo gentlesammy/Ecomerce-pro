@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # installed applications 
+    "ecomerce.blog",
+    "ecomerce.dashboard"
 ]
 
 MIDDLEWARE = [
@@ -72,6 +75,17 @@ WSGI_APPLICATION = 'ecomerce.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ecom',
+#         'USER' : 'django',
+#         'PASSWORD' : '1984',
+#         'HOST' : 'localhost',
+#         'PORT' : '3306',
+#     }
+# }
 
 DATABASES = {
     'default': {
