@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+# Application definition ecomerce\demo
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     # installed applications 
     "ecomerce.blog",
     "ecomerce.dashboard",
-    "ecomerce.inventory"
+    "ecomerce.inventory",
+    "ecomerce.demo",
+    #external applications
+    'mptt',
 ]
 
 MIDDLEWARE = [
@@ -77,23 +80,23 @@ WSGI_APPLICATION = 'ecomerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'ecom',
-#         'USER' : 'django',
-#         'PASSWORD' : '1984',
-#         'HOST' : 'localhost',
-#         'PORT' : '3306',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ecom',
+        'USER' : 'django',
+        'PASSWORD' : '1984',
+        'HOST' : 'localhost',
+        'PORT' : '3306',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -131,8 +134,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_URL = '/ecomerce/demo/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'ecomerce\demo\static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
